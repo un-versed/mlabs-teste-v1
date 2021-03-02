@@ -4,6 +4,8 @@
   "description": "Projeto do processo seletivo para vaga na mLabs",
   "main": "index.js",
   "scripts": {
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "cz"
   },
