@@ -1,0 +1,49 @@
+{
+  "name": "mlabs-teste-v1",
+  "version": "1.0.0",
+  "description": "Projeto do processo seletivo para vaga na mLabs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz"
+  },
+  "author": "Gustavo Henrique <gu.bat98@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "ejs": "3.1.6",
+    "errorhandler": "1.5.1",
+    "express": "4.17.1",
+    "express-jwt": "6.0.0",
+    "express-session": "1.17.1",
+    "jsonwebtoken": "8.5.1",
+    "method-override": "3.0.0",
+    "methods": "1.1.2",
+    "mongoose": "5.11.18",
+    "mongoose-unique-validator": "2.0.3",
+    "morgan": "1.10.0",
+    "passport": "0.4.1",
+    "passport-local": "1.0.0",
+    "request": "2.69.0",
+    "slug": "4.0.3",
+    "underscore": "1.12.0"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.21.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "newman": "^5.2.2",
+    "nodemon": "^2.0.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
