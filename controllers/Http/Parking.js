@@ -64,8 +64,15 @@ class ParkingController {
       // Set the reserve number
       const reserveNumber = await ParkingController.generateReserveNumber()
 
+      // Check if alreay exists a reservation open for this plate
+      let parking = await Parking.findOne({ plate, left: false, paid: false })
+
+      if (parking) {
+        return res.status(422).json({ error: 'Já existe uma reserva para a placa informada.' })
+      }
+
       // Create Parking object
-      const parking = new Parking({ plate, reserveNumber })
+      parking = new Parking({ plate, reserveNumber })
       await parking.save()
 
       return res.json(parking.toJSON())
