@@ -1,4 +1,5 @@
 const Joi = require('@hapi/joi')
+const JoiValidationError = require('./../../exceptions/JoiValidationError')
 const options = {
   messages: require('./language')
 }
@@ -11,7 +12,7 @@ class Validator {
   validate (request, response, next) {
     const result = this.schema.validate(request.body, options)
     if (result.error) {
-      throw result.error
+      throw new JoiValidationError(result.error.message)
     }
   }
 }
