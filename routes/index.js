@@ -7,5 +7,4 @@ router.get('/', (req, res, next) => {
   return res.json({ title: 'mLabs Teste API v1' })
 })
 
-
 module.exports = router
