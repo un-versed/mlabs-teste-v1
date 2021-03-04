@@ -10,8 +10,8 @@ script: yarn test
 
 env:
   - PORT=3000
-  - NODE_ENV=testing
-  - SECRET=randomHashSecret
+  - NODE_ENV="testing"
+  - SECRET="randomHashSecret"
 
 services:
   - mongodb
