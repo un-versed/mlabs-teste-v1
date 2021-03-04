@@ -14,8 +14,12 @@ class ParkingController {
  */
   async index (req, res, next) {
     try {
+      let left = req.query.left
+      // By default, only return non left reservations
+      if (!left) left = false
+
       // Get Parking object
-      const parkingHistory = await Parking.find()
+      const parkingHistory = await Parking.find({ left })
 
       return res.json(parkingHistory)
     } catch (error) {
