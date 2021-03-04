@@ -12,6 +12,7 @@
   "author": "Gustavo Henrique <gu.bat98@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "body-parser": "1.19.0",
     "cors": "2.8.5",
     "dotenv-safe": "^8.2.0",
