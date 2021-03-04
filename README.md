@@ -1,4 +1,4 @@
-# mLabs processo seletivo Node.js ![https://api.travis-ci.com/un-versed/mlabs-teste-v1.svg?branch=master]
+# mLabs processo seletivo Node.js ![Build](https://api.travis-ci.com/un-versed/mlabs-teste-v1.svg?branch=master)
 
 # Problema proposto
 
