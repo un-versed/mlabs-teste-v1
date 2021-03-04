@@ -73,7 +73,7 @@ class ParkingController {
 
       // Check if Parking was paid
       if (parking.paid) {
-        return res.status(402).json({ error: 'Essa reserva já foi paga.' })
+        return res.status(422).json({ error: 'Essa reserva já foi paga.' })
       }
 
       // Set new values
@@ -106,6 +106,11 @@ class ParkingController {
       // Check if Parking was paid
       if (!parking.paid) {
         return res.status(402).json({ error: 'Você deve pagar o estacionamento antes de sair.' })
+      }
+
+      // Check if Parking was left
+      if (parking.paid) {
+        return res.status(422).json({ error: 'Você já saiu do estacionamento.' })
       }
 
       // Continue if parking was paid
