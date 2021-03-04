@@ -109,7 +109,7 @@ class ParkingController {
       }
 
       // Check if Parking was left
-      if (parking.paid) {
+      if (parking.left) {
         return res.status(422).json({ error: 'Você já saiu do estacionamento.' })
       }
 
