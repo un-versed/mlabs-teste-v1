@@ -58,6 +58,6 @@ app.use(function (req, res, next) {
 app.use(globalErrorHandler)
 
 // Server starting
-const server = app.listen(process.env.PORT || 3000, function () {
+const server = app.listen(env.PORT || 3000, function () {
   console.log('Listening on port ' + server.address().port)
 })
