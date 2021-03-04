@@ -1,4 +1,4 @@
-const Joi = require('@hapi/joi')
+const Joi = require('joi')
 const JoiValidationError = require('./../../exceptions/JoiValidationError')
 const options = {
   messages: require('./language')
