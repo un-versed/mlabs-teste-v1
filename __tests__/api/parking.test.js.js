@@ -45,6 +45,18 @@ it('create parking reservation', async done => {
   done()
 })
 
+it('block multiple reservation for same plate', async done => {
+  const response = await request.post('/api/parkings').send({
+    plate: 'ABC-1234'
+  })
+  expect(response.status).toBe(422)
+
+  expect(response.body).toMatchObject({
+    error: 'Já existe uma reserva para a placa informada.'
+  })
+  done()
+})
+
 it('block a registered car but not paid yet to leave', async done => {
   const response = await request.put(`/api/parkings/${reserveNumber}/out`)
 
@@ -94,4 +106,3 @@ it('leave a parking reservation', async done => {
 
   done()
 })
-
