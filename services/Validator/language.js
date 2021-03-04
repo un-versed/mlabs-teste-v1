@@ -48,5 +48,6 @@ module.exports = {
   'date.base': '{{#label}} precisa ser uma data válida',
   'number.unsafe': '{{#label}} precisa ser um número válido',
   'array.min': '{{#label}} deve conter ao menos {{#limit}} items',
-  'array.max': '{{#label}} deve conter no máximo {{#limit}} item'
+  'array.max': '{{#label}} deve conter no máximo {{#limit}} item',
+  'plate.base': '{{#label}} precisa ser válida'
 }
