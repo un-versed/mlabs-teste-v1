@@ -34,9 +34,10 @@ if (!isProduction) {
 // Select which database to use
 if (isProduction) {
   mongoose.connect(process.env.MONGODB_URI)
+} else if (env.NODE_ENV === 'testing') {
+  mongoose.connect('mongodb://localhost/mlabs-teste-jest', { useUnifiedTopology: true, useNewUrlParser: true })
 } else {
   mongoose.connect('mongodb://localhost/mlabs-teste', { useUnifiedTopology: true, useNewUrlParser: true })
-  mongoose.set('debug', true)
 }
 
 // Pre Load Models
@@ -57,7 +58,4 @@ app.use(function (req, res, next) {
 // Global Exception Handler
 app.use(globalErrorHandler)
 
-// Server starting
-const server = app.listen(env.PORT || 3000, function () {
-  console.log('Listening on port ' + server.address().port)
-})
+module.exports = app
