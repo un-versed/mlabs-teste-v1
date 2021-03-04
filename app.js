@@ -48,33 +48,8 @@ app.use(function (req, res, next) {
   next(err)
 })
 
-// Error handling
-// If is not production, then log errors
-if (!isProduction) {
-  app.use(function (err, req, res, next) {
-    console.log(err.stack)
-
-    res.status(err.status || 500)
-
-    res.json({
-      errors: {
-        message: err.message,
-        error: err
-      }
-    })
-  })
-}
-
-// If is production, then don't log errors
-app.use(function (err, req, res, next) {
-  res.status(err.status || 500)
-  res.json({
-    errors: {
-      message: err.message,
-      error: {}
-    }
-  })
-})
+// Global Exception Handler
+app.use(globalErrorHandler)
 
 // Server starting
 const server = app.listen(process.env.PORT || 3000, function () {
