@@ -2,6 +2,12 @@ const app = require('./../../app')
 const supertest = require('supertest')
 const request = supertest(app)
 let reserveNumber = null
+const mongoose = require('mongoose')
+
+afterAll(async done => {
+  mongoose.disconnect()
+  done()
+})
 
 it('gets the root endpoint', async done => {
   const response = await request.get('/')
