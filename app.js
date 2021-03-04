@@ -39,6 +39,10 @@ if (isProduction) {
   mongoose.set('debug', true)
 }
 
+// Pre Load Models
+require('./models/User')
+// Config
+require('./config/passport')
 // Route files
 app.use(require('./routes'))
 

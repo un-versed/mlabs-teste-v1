@@ -1,7 +1,5 @@
 const router = require('express').Router()
 
-router.get('/', (req, res, next) => {
-  return res.json({ teste: 'mLabs' })
-})
+router.use('/', require('./users'))
 
 module.exports = router
