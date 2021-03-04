@@ -115,6 +115,11 @@ class ParkingController {
       parking.leftAt = leftAt
       parking.left = true
 
+      // Set permanence time
+      const permanenceTime = parking.permanenceTime(parking.enteredAt, parking.leftAt)
+
+      parking.time = permanenceTime
+
       await parking.save()
 
       return res.json(parking.toJSON())
