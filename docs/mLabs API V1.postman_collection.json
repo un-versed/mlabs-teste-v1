@@ -173,12 +173,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/user",
+							"raw": "{{apiUrl}}/users",
 							"host": [
 								"{{apiUrl}}"
 							],
 							"path": [
-								"user"
+								"users"
 							]
 						}
 					},
@@ -219,12 +219,12 @@
 							"raw": "{\n    \"username\": \"testevader\",\n    \"password\": \"padme12346\"\n}"
 						},
 						"url": {
-							"raw": "{{apiUrl}}/user",
+							"raw": "{{apiUrl}}/users",
 							"host": [
 								"{{apiUrl}}"
 							],
 							"path": [
-								"user"
+								"users"
 							]
 						}
 					},
