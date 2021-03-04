@@ -3,7 +3,7 @@
  */
 const passport = require('passport')
 const Validator = require('./../../services/Validator')
-const Joi = require('@hapi/joi')
+const Joi = require('joi')
 const mongoose = require('mongoose')
 const User = mongoose.model('User')
 

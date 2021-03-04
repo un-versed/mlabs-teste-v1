@@ -1,13 +1,13 @@
 const router = require('express').Router()
-const UserController = require('./../../controllers/Http/User')
+const UserController = require('../../controllers/Http/User')
 const auth = require('../auth')
 
-router.put('/user', auth.required, UserController.update)
+router.put('/', auth.required, UserController.update)
 
-router.get('/user', auth.required, UserController.currentUser)
+router.get('/', auth.required, UserController.currentUser)
 
-router.post('/users/login', UserController.auth)
+router.post('/login', UserController.auth)
 
-router.post('/users', UserController.register)
+router.post('/', UserController.register)
 
 module.exports = router
