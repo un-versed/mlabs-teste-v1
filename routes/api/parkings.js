@@ -21,5 +21,10 @@ router.put('/:reserveNumber/pay', ParkingController.pay)
  * GET parkings/:plate
  */
 router.get('/:plate', ParkingController.indexByPlate)
+/**
+ * List all Parking Reservations
+ * GET parkings
+ */
+router.get('/', ParkingController.index)
 
 module.exports = router

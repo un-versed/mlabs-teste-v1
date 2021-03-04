@@ -322,6 +322,48 @@
 					"response": []
 				},
 				{
+					"name": "Get Parking Full History",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8bd75fc6-3684-4d5d-a8f6-b8dde9d10c43",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{apiUrl}}/parkings",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"parkings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Left Parking Reservation",
 					"event": [
 						{

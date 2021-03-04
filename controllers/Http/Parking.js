@@ -9,6 +9,21 @@ const plateValidation = require('./../../services/Validator/attr/plate')
 
 class ParkingController {
   /**
+ * List all Parking Reservations
+ * GET parkings/
+ */
+  async index (req, res, next) {
+    try {
+      // Get Parking object
+      const parkingHistory = await Parking.find()
+
+      return res.json(parkingHistory)
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  /**
    * List all Parking Reservations by Plate
    * GET parkings/:plate
    */
