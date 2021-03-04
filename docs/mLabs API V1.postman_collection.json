@@ -322,7 +322,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Parking Full History",
+					"name": "Get Parking Full History (Left)",
 					"event": [
 						{
 							"listen": "test",
@@ -352,12 +352,66 @@
 							}
 						],
 						"url": {
-							"raw": "{{apiUrl}}/parkings",
+							"raw": "{{apiUrl}}/parkings?left=true",
 							"host": [
 								"{{apiUrl}}"
 							],
 							"path": [
 								"parkings"
+							],
+							"query": [
+								{
+									"key": "left",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Parking Full History (Not Left)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eea09979-18dd-441b-a1ab-0a08527f5d5a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{apiUrl}}/parkings?left=false",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"parkings"
+							],
+							"query": [
+								{
+									"key": "left",
+									"value": "false"
+								}
 							]
 						}
 					},
