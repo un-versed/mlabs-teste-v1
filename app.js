@@ -41,6 +41,7 @@ if (isProduction) {
 
 // Pre Load Models
 require('./models/User')
+require('./models/Parking')
 // Config
 require('./config/passport')
 // Route files
