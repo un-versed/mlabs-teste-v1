@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 const cors = require('cors')
 const errorhandler = require('errorhandler')
+const globalErrorHandler = require('./middlewares/ErrorHandler')
 const mongoose = require('mongoose')
 const env = process.env
 const isProduction = env === 'production'
